@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="education.html">education</a>
+            <a href="projects.html">projects</a>
+            <a href="likes.html">likes</a>
+            <a href="contacts.html">contact</a>
+            <div>
+                <a href="https://www.facebook.com/amal.sev" target="blank" class="fab fa-facebook-f"
+                    style="float: left;"></a>
+                <a href="https://github.com/Amal987" target="blank" class="fa-brands fa-github"
+                    style="float: left;"></a>
+                <a href="https://www.instagram.com/a_m_a_.l/" target="blank" class="fab fa-instagram"
+                    style="float: left;"></a>
+                <a href="https://www.linkedin.com/in/amal-sasidharan/" target="blank" class="fab fa-linkedin"
+                    style="float: left;"></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+
+
+
+
+    <!-- portfolio section ends -->
+
+    <!-- blogs section starts  -->
+
+
+
+
+
+    <!-- blogs section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> contact <span> me </span> </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img class="tilt" src="images/contact-img.svg" alt="">
+            </div>
+
+            <form id="submit-form">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="name" name="name" id="name" required>
+                    <input type="email" placeholder="email" name="email" id="email" required>
+                </div>
+
+                <input type="text" placeholder="subject" class="box" name="subject" id="subject" required>
+
+                <textarea name="texts" placeholder="message" name="" id="texts" cols="30" rows="10" required></textarea>
+
+                <input type="submit" class="btn" value="send message">
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section  -->
+
+    <div class="footer"> created by <span> mr. amal sasidharan</span> | <a href="contacts.html">Contact Me</a> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- javascript part  -->
+
+    <!-- typed.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <!-- particles.js links  -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- vanilla-tilt.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <script>
+
+        let menu = document.querySelector('#menu-bars');
+        let header = document.querySelector('header');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            header.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            header.classList.remove('active');
+        };
+
+        var typed = new Typed('.typing-text', {
+            strings: ['python developer'],
+            loop: true,
+            typeSpeed: 150
+        });
+
+        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+            max: 25
+        });
+
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            $("#submit-form").validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true
+                    },
+                    subject: {
+                        required: true
+                    },
+                    texts: {
+                        required: true
+                    }
+
+                }
+            })
+        })
+    </script> -->
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbzVmuXJoVHUpE-ZqP88GBHUwwunhTqminNjSACVS4dbyk-YTmpddggfGZMBrZbQwag/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error: function (err) {
+                    alert("Something Error")
+
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

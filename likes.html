@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>likes</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="education.html">education</a>
+            <a href="projects.html">projects</a>
+            <a href="likes.html">likes</a>
+            <a href="contacts.html">contact</a>
+            <div>
+                <a href="https://www.facebook.com/amal.sev" target="blank" class="fab fa-facebook-f"
+                    style="float: left;"></a>
+                <a href="https://github.com/Amal987" target="blank" class="fa-brands fa-github"
+                    style="float: left;"></a>
+                <a href="https://www.instagram.com/a_m_a_.l/" target="blank" class="fab fa-instagram"
+                    style="float: left;"></a>
+                <a href="https://www.linkedin.com/in/amal-sasidharan/" target="blank" class="fab fa-linkedin"
+                    style="float: left;"></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+
+
+    <!-- services section starts  -->
+
+
+
+
+    <!-- services section ends -->
+
+    <!-- portfolio section starts  -->
+
+
+
+
+    <!-- services section ends -->
+
+    <!-- portfolio section starts  -->
+
+    <section class="portfolio" id="likes">
+
+        <h1 class="heading"> <span> my </span> likes </h1>
+
+        <div class="box-container">
+
+            <div class="box tilt">
+                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-09/16/full/1631766502-0839.jpg"
+                    alt="">
+                <div class="content">
+                    <h2>Football</h2>
+                </div>
+            </div>
+
+            <div class="box tilt">
+                <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/07/19/985947-driver.jpg"
+                    alt="">
+                <div class="content">
+                    <h2>Driving</h2>
+                </div>
+            </div>
+
+            <div class="box tilt">
+                <img src="https://www.zdnet.com/a/img/resize/8974d46cae052b00495ab2989e14523134ca610b/2021/07/19/8a337c80-5ed6-43a1-98fb-b981d420890f/programming-languages-shutterstock-1680857539.jpg?width=770&height=578&fit=crop&auto=webp"
+                    alt="">
+                <div class="content">
+                    <h2>Coding</h2>
+                </div>
+            </div>
+
+            <div class="box tilt">
+                <img src="https://www.esn.org/blog/sites/default/files/travelling_alone_all_across_the_globe.jpg"
+                    alt="">
+                <div class="content">
+                    <h2>Travelling</h2>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    <!-- portfolio section ends -->
+
+    <!-- blogs section starts  -->
+
+
+
+
+
+    <!-- blogs section ends -->
+
+    <!-- contact section starts  -->
+
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section  -->
+
+    <div class="footer"> created by <span> mr. amal sasidharan</span> | <a href="contacts.html">Contact Me</a> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- javascript part  -->
+
+    <!-- typed.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <!-- particles.js links  -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- vanilla-tilt.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+
+        let menu = document.querySelector('#menu-bars');
+        let header = document.querySelector('header');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            header.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            header.classList.remove('active');
+        };
+
+        var typed = new Typed('.typing-text', {
+            strings: ['python developer'],
+            loop: true,
+            typeSpeed: 150
+        });
+
+        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+            max: 25
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
